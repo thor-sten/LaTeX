@@ -1,0 +1,57 @@
+%SEITENLAYOUT, SCHRIFT:
+%\RequirePackage{fix-cm}							%Schrift wirkt weniger blass
+\documentclass[
+	a4paper,
+	%12pt,														%andere Schriftgröße
+	%DIV11,														%Devisor des Satzspiegels
+	%parskip, 												%Deutsche Absatzformatierung
+	%twoside,
+	%openany,													%oder openright (Voreinstellung bei scrbook)
+	%headsepline,											%Trennline zum Seitenkopf
+	captions=tableheading							%Tabellenbeschriftungen über der Tabelle
+	%bibtotoc, 												%Literaturverzeichnis im Inhalt
+	%draft														%Dokument als Entwurf erstellen
+	]{scrartcl}												%KOMA-Script Klassen: scrbook (zweiseitig), scrreprt, scrartcl (keine Titelseite), scrlettr
+%\pagestyle{headings}								%Kopfzeilen
+%\usepackage{geometry}							%Seitenränder verändern mit \geometry:
+%\geometry{a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm} 
+
+%SPRACHE, SCHRIFTART:
+%\usepackage[T1]{fontenc}						%erweiterter Buchstabensatz mit Umlauten
+%\usepackage[latin1]{inputenc}			%Eingabe über deutsche Tastatur (Umlaute)
+%\usepackage{lmodern}								%neue Schriftfamilie "Latin Modern"
+%\usepackage[ngerman]{babel}				%babel: Überschriften (Inhaltsverzeichnis) auf Deutsch, ngerman: neue Rechtschreibung
+
+%FORMELN, TEXT:
+%\usepackage{paralist}							%Aufzählungen editieren
+\usepackage{amsmath, amssymb}				%Mathe Formelsatz, amssymb: mathematische Sonderzeichen
+%\usepackage{upgreek}								%aufrechte griechische Buchstaben mit $\up...$
+\usepackage{units}									%Einheiten richtig darstellen und \unitfrac[wert]{zähler}{nenner}
+%\usepackage{eurosym}								%offizielles Euro Symbol mit \EUR{}
+%\usepackage{mathptmx}							%Schriftart für Formeln
+
+%GRAFIKEN, TABELLEN:
+\usepackage{graphicx}								%Grafiken/Bilder einbetten
+\usepackage{booktabs}								%schönere Tabellen
+\usepackage[bf]{caption}						%Bildunterschriften und Tabellenüberschriften anpassen
+\renewcommand{\captionfont}{\small}	%kleinere Bildunterschriften
+\usepackage{subfigure}
+\usepackage{placeins}								%mit \FloatBarrier Gleitobjekte begrenzen
+%\usepackage{threeparttable}				%Fussnoten in Tabellen
+%\usepackage{wrapfig}
+%\usepackage{longtable}							%lange Tabellen automatisch umbrechen
+%\usepackage{float}									%mit [H] Bilder zwingend an dieser Stelle einbinden
+
+%PDF-OPTIONEN:
+%\usepackage{pdfpages}							%pdf-Dateien einbinden mit \includepdf[pages=1-4,landscape]{datei.pdf}
+%\usepackage{hyperref}							%Verlinkung im .pdf Dokument
+%\usepackage[all]{hypcap}						%Bilder, nicht Bildunterschriften verlinken
+%\hypersetup{
+	%pdftitle={},
+	%pdfauthor={},
+	%pdfborder=0 0 0, 								%keine Box um die Links
+	%colorlinks=true,									%verlinkter Text farbig
+	%pdfstartpage={1}, 								%Startseite des Dokuments
+	%plainpages=false,	 							%empfohlen bei römischer Seitennummerierung zu Beginn
+	%bookmarksnumbered=true						%Kapitelnummerierung in "Lesezeichen" Liste
+	%}

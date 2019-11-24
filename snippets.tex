@@ -1,0 +1,237 @@
+\FloatBarrier %\usepackage{placeins}
+%---------------------------------------------------------------------------------------------------
+\newpage
+\newline 
+\linebreak %erh�lt den Blocksatz und bricht vor den �berstehenden Worten um
+\- %Trenn\-hilfe
+
+%	Textgr�sse:
+\tiny \scriptsize \footnotesize \small \normalsize \large \Large \LARGE \huge \Huge
+
+%	Zeichenabstand:
+\, \: \ \quad \qquad 
+
+%Vertikaler Abstand:
+\vspace{1cm}
+\vspace* %Gilt auch am Seitenanfang
+\vfill: oder \vspace{\fill} %R�ckt den nachfolgenden Absatz ans Seitenende
+
+%	Sonderzeichen:
+\AA %� (nicht $\AA$)
+$^{\circ}$C %grad Celsius
+
+%	Im Mathe Modus:
+\cdot %Multiplikationspunkt
+\dfrac{}{} %Bruch mit gr�sserem vertikalem Abstand
+\displaystyle %grosse Formel innerhalb der Textzeile
+\mathbf{} %Vektor in Fettschrift
+x_\text{max}
+\text{}, \mbox{} %Text in Formeln�
+\boxed{} %Formel einramen
+
+\eqref{eq:} %Formeln Referenzieren (keine Zahl zu Beginn!)
+\multicolumn{2}{c}{...}
+\usepackage{multirow} \multirow{2}{*}{...}
+
+%	Sch�nere Tabelle (\usepackage{booktabs}):
+\begin{table}[h]
+\centering \caption{}
+\begin{tabular}{*{3}{l}}
+	\toprule
+	\\
+	\midrule
+	\\
+	
+	\bottomrule
+\end{tabular} \label{tab:}
+\end{table}
+
+\usepackage[subfig]
+ 
+ \begin{figure}[ht]
+	\subfloat[1]
+	{\includegraphics[width=0.45\textwidth]{.jpg}}
+	\hfill
+	\subfloat[2]
+	{\includegraphics[width=0.45\textwidth]{.jpg}}
+	\caption{Caption}
+	\label{fig:}
+ \end{figure}
+
+%	Subfigures (\usepackage{subfigure}):
+\begin{figure}[h]
+  \centering
+    \subfigure[]{
+    	%\label{fig:-a}
+    	\includegraphics[width=\sub]{.png}}  
+		\subfigure[]{
+			\includegraphics[width=\sub]{.png}}
+  \caption{}
+  \label{fig:}
+\end{figure}
+
+\subref{fig:}
+
+%	Begriffsbeschreibung (keine Aufz�hlung):
+\begin{description}
+	\item[a] 
+	\item[b] 
+\end{description}
+
+%	Aufz�hlung mit anderem Z�hler (alternativ [--i--] oder [I.])
+\begin{enumerate}[a)]
+	\item 
+	\item
+\end{enumerate}
+
+%Quellcode
+\begin{small}
+\begin{verbatim}
+...
+\end{verbatim}
+\end{small}
+
+\verb-...- %anstatt '-' kann jedes beliebige Zeichen benutzt werden
+
+%	Mehrzeilige Formeln (*: ohne Nummerierung, alternativ: \notag)
+\begin{align*}
+	&=	\\
+	&=
+\end{align*}
+%\label{eq:)
+
+%	Differenzial:
+\frac{\mathrm dx}{\mathrm dt} %aufrechtes d
+\mathrm dI/\mathrm dV
+\frac{\partial x}{\partial t}
+
+%Vektor
+\mathbf{v}=
+\begin{pmatrix}
+	x\\	y\\	z\\
+\end{pmatrix}
+
+%Matrix (Einheistmatrix), 
+I=
+\begin{pmatrix}
+	1 & 0 & \cdots & 0\\
+	0 & 1 & \cdots & 0\\
+	\vdots & \vdots & \ddots & \vdots\\
+	0 & 0 & \cdots & 1\\
+\end{pmatrix}
+
+%Determinante:
+D=
+\begin{vmatrix}
+	1 & 0 & 0\\
+	0 & 1 & 0\\
+	0 & 0 & 1\\
+\end{vmatrix}
+
+%Cases
+f(x)= 
+\begin{cases}
+	1 & 0 \leq x \leq 1\\ 
+	0 & \text{else}
+\end{cases}
+
+\marginpar{...} %Kommentar am Seitenrand
+\pagenumbering{arabic}
+\pagenumbering{roman}
+
+%Tabelle mit Fussnote (\uepackage{threeparttable}):
+\begin{table}[h]
+	\centering
+	\caption{}
+	\begin{threeparttable}
+			\begin{tabular}{*{3}{l}}
+			\toprule
+			...
+			\midrule
+			=>Fussnote\tnote{1}
+			\bottomrule
+		\end{tabular}
+		\begin{tablenotes}\footnotesize 
+			\item[1] Fussnote
+		\end{tablenotes}
+	\end{threeparttable}
+	\label{tab:}
+\end{table}
+
+%Textumschlossene Bilder (\usepackage{wrapfig} - macht Probleme in Verbindung mit float-Grafiken):
+\begin{wrapfigure}{r}{5cm}
+\centering
+\includegraphics{Bild}
+\caption{Hier steht die Beschreibung des Bildes}
+\end{wrapfigure}
+
+%Beschriftung im Abbildungsverzeichnis:
+\begin{figure}[htb]
+\centering
+\includegraphics{Bild}
+\caption[Verzeichniseintrag]{sehr lange Beschreibung}
+\end{figure}
+...
+\listoffigures
+
+%Appendix:
+\begin{appendix}
+\section{...}
+...
+\end{appendix}
+
+%Kopf- und Fusszeile:
+\pagestyle{} %alle nachfolgenden, 
+\thispagestyle{} %nur die aktuelle Seite
+Optionen: plain, empty, headings
+
+%Referenzieren ohne:
+\usepackage{url} %wenn URLs zitiert werden
+...
+\begin{thebibliography}{9}
+\bibitem{irf} Swedish Institute of Space Physics (IRF) \\ \url{http://www.irf.se}
+\end{thebibliography}
+
+%Zweispaltig:
+\documentclass[11pt,twocolumn]{article}
+\setlength{\columnsep}{distance}	%Abstand zwischen den Spalten
+\setlength{\columnseprule}{thickness}	%Trennlinie zwischen den Spalten
+
+%Titelseite:
+\begin{titlepage}
+\newcommand{\abst}{0.5cm}
+\begin{center}
+\begin{large}
+	\vspace*{\fill}{{\huge Thorsten Jacobs}\\ 
+	\vspace{\abst} 821206-2494\\ 
+	\vspace{\abst} jacobs.thorsten@web.de}
+	\vfill {{\huge {Lab 2\\ 
+	\vspace{\abst} Numerical Solution of Initial Value Problems}}}
+	\vfill DN2221 - Applied Numerical Methods I, autumn 2009\\ 
+	\vspace{\abst} Teacher: Lennard Edsberg
+	\vfill {Submitted: \today}
+\end{large}
+\end{center}
+\end{titlepage}
+
+%Basic header:
+\documentclass[a4paper, captions=tableheading]{scrartcl}
+\usepackage{amsmath}
+\usepackage{units} \newcommand{\un}{\unit} \usepackage{upgreek} %\upmu
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[bf]{caption} \renewcommand{\captionfont}{\small}
+\usepackage{subfigure}
+\newcommand{\pic}{10cm} \newcommand{\sub}{7cm}
+\newcommand{\E}[1]{\cdot 10^{#1}}
+
+\newcommand{\ho}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\ti}[1]{\ensuremath{_{\textrm{#1}}}}
+\graphicspath{{Bilder/}}
+
+%Kurzer Titel:
+\title{Title \\ \ \\ \LARGE{Subtitle}}
+\author{Thorsten}
+%\date{}
+\begin{document}
+\maketitle
